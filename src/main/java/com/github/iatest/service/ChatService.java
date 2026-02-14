@@ -48,4 +48,19 @@ public class ChatService {
             Files.write(resourcesPath.resolve(metadata.filename()), content);
         }
     }
+
+    /*
+    public void sendDocumentCustom() {
+        ChatResponse response = chatModel.call(
+                new Prompt(
+                        "Create a quarterly sales report with revenue, expenses, and profit by month",
+                        AnthropicChatOptions.builder()
+                                .model("claude-sonnet-4-5")
+                                .skill(AnthropicSkill.XLSX)
+                                .skill("skill_01WatermarkXyz123") -- id gerado como resultado no envio atravez do script criar_doc_custom_claude.sh
+                                .maxTokens(8192)
+                                .build()
+                )
+        );
+    }*/
 }
