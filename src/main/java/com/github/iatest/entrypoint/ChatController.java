@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 @RestController
 @RequestMapping("/api/v1/chats")
@@ -16,7 +17,7 @@ public class ChatController {
     private final ChatService chatService;
 
     @PostMapping
-    public void send() throws IOException {
+    public void send() throws IOException, URISyntaxException {
         chatService.requestDocument();
     }
 }
